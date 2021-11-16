@@ -81,6 +81,12 @@
                     android:layout_height="wrap_content"/>
 
                 <include
+                    android:id="@+id/include_error"
+                    layout="@layout/layout_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:activity="@{activity}" />
+                <include
                     android:id="@+id/include_no_internet"
                     layout="@layout/layout_no_internet_connection"
                     android:layout_width="match_parent"

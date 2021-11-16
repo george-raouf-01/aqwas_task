@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="activity"
+            type="com.example.githubaqwastask.presentation.MainActivity" />
+
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_error"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            tools:text="asdasdsadasd asd ad ad asd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:background="@drawable/stroke_button_transperant"
+            android:text="RETRY"
+            android:onClick="@{() -> activity.checkInternetAndRefresh()}"
+            android:textColor="@color/napier_green" />
+    </LinearLayout>
+</layout>

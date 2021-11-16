@@ -27,7 +27,7 @@ abstract class CleanNetworkBoundResource<ResponseType, ResultType>(val applicati
                         result.postValue(Resource.Success(null))
                     }
                 } else {
-                    result.postValue(Resource.Error(message = resposne.message(), null))
+                    result.postValue(Resource.Error(message = resposne.message() ?: "Error Retrieving Data", null))
                 }
             } catch (e: Exception) {
                 e.printStackTrace()

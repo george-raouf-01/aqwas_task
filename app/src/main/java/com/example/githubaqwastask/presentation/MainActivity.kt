@@ -103,6 +103,8 @@ class MainActivity : AppCompatActivity() {
             }
             binding?.progressBar?.isVisible = it is Resource.Loading
             binding?.rvItems?.isVisible = it is Resource.Success && !it.data.isNullOrEmpty()
+            binding?.includeError?.root?.isVisible = it is Resource.Error
+            if(it is Resource.Error) binding?.includeError?.tvError?.text = it.message
 
         }
     }
